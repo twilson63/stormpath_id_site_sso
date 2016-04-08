@@ -11,6 +11,9 @@ most.fromEvent('click', document.getElementById('login'))
 if (R.equals(window.location.pathname, '/authorize')) {
   console.log(qs.parse(window.location.search))
   //window.location.pathname = '/'
-  window.location.href = '/'
   document.body.appendChild(h('h3', ['Login Success, have JWT']))
+  setTimeout(function() {
+    window.location.href = '/'    
+  }, 5000)
+
 }
